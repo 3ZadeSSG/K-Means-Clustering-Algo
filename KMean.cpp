@@ -1,9 +1,4 @@
-#include<iostream>
-#include<iomanip>
-#include<stdlib.h>
-#include<math.h>
-#include<fstream>
-#include<vector>
+#include<bits/stdc++.h>
 using namespace std;
 class KMean{
 	vector<vector<double> >data; 
@@ -109,7 +104,7 @@ void KMean::update_centroid(){
 void KMean::create_centroid(){
 	for(int i=0;i<total_clusters;i++){
 		for(int j=0;j<attributes;j++){
-			centroid[i][j]=L[j]+(U[j]-L[j])*( ((double) rand() / (RAND_MAX)));
+			centroid[i][j]=L[j]+(U[j]-L[j])*( ((double) rand() / (double)(RAND_MAX)));
 		}
 	}
 }
